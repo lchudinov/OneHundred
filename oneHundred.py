@@ -11,7 +11,7 @@ for i in range(7):
     candidate = (number, 10 * perm[0] + perm[1], 10 * perm[2] + perm[3], 10 * perm[4] + perm[5])
     normalized_candidate = tuple(sorted(candidate))
     if one_hundred == sum(normalized_candidate):
-      solutions.add(tuple(sorted(candidate)))
+      solutions.add(normalized_candidate)
 
 print ("Solutions found:", len(solutions))
 print ("Are solutions correct?", all(one_hundred == sum(solution) for solution in solutions))
