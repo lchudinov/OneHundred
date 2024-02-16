@@ -8,9 +8,9 @@ for i in range(7):
   number = digits[i]
   rest = [x for j, x in enumerate(digits) if j!=i]
   for perm in permutations(rest, 6):
-    result = number + (perm[0] * 10 + perm[1]) + (perm[2] * 10 + perm[3]) + (perm[4] * 10 + perm[5])
-    if result == one_hundred:
-      solutions.append((number, perm[0] * 10 + perm[1], perm[2] * 10 + perm[3], perm[4] * 10 + perm[5]))
+    candidate = (number, perm[0] * 10 + perm[1], perm[2] * 10 + perm[3], perm[4] * 10 + perm[5])
+    if one_hundred == sum(candidate):
+      solutions.append(candidate)
 
 print ("Solutions found:", len(solutions))
 print ("Are solutions unique?", len(solutions) == len(set(solutions)))
