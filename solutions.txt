@@ -1,5 +1,4 @@
 Solutions found: 48
-Are solutions unique? True
 Are solutions correct? True
 (7, 13, 24, 56)
 (3, 16, 24, 57)
