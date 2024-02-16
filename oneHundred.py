@@ -6,7 +6,7 @@ one_hundred = 100
 
 for i in range(7):
   number = digits[i]
-  rest = [x for j, x in enumerate(digits) if j!=i]
+  rest = digits[:i] + digits[i+1:]
   for perm in permutations(rest, 6):
     candidate = (number, perm[0] * 10 + perm[1], perm[2] * 10 + perm[3], perm[4] * 10 + perm[5])
     if one_hundred == sum(candidate):
